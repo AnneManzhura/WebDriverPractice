@@ -9,6 +9,13 @@ class DuckduckgoPage {
         this.btnSearch.click();
     }
 
+    findLink(link){
+
+        let resultLinks = $('.results--main').$$('.result__url')
+
+        return (resultLinks.find(el => el.getAttribute('href')===link))
+    }
+
     findResult(index){
         const resultLinks = $('#links')
         return (resultLinks.$$('div .result')[index].$('.result__url'))

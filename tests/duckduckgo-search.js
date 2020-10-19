@@ -16,4 +16,10 @@ describe('Duckduckgo search', () => {
         expect(DuckduckgoPage.findResult(3)).toHaveHrefContaining("https://www.crunchbase.com/organization/clearmove")
     })
 
+    it('finds links ', () => {
+
+        expect(DuckduckgoPage.findLink("http://clearmove.com/")).toBePresent();
+    })
+
+
 })
