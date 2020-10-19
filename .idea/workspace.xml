@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="502ec17a-7f8c-4b7e-8f36-80aa36ff3960" name="Default Changelist" comment="folder tree changed&#10;gitignore added">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iuC7eLr2J3WXVShW5U2saYD0Lz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="ssh.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/pageobjects" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="502ec17a-7f8c-4b7e-8f36-80aa36ff3960" name="Default Changelist" comment="" />
+      <created>1602747924227</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602747924227</updated>
+      <workItem from="1602747925328" duration="12807000" />
+      <workItem from="1603102897619" duration="1116000" />
+      <workItem from="1603104809767" duration="372000" />
+    </task>
+    <task id="LOCAL-00001" summary="folder tree changed&#10;gitignore added">
+      <created>1603103558360</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603103558360</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="folder tree changed&#10;gitignore added" />
+    <option name="LAST_COMMIT_MESSAGE" value="folder tree changed&#10;gitignore added" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="173" y="63" width="998" height="796" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603105119793">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="173" y="63" width="998" height="796" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1603105119793" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603043072665">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1603043072665" />
+    <state width="1419" height="372" key="GridCell.Tab.0.bottom" timestamp="1603103125379">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="372" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603103125379" />
+    <state width="1419" height="372" key="GridCell.Tab.0.center" timestamp="1603103125378">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="372" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603103125378" />
+    <state width="1419" height="372" key="GridCell.Tab.0.left" timestamp="1603103125377">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="372" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603103125377" />
+    <state width="1419" height="372" key="GridCell.Tab.0.right" timestamp="1603103125379">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="372" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603103125379" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1603104833732">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1603104833732" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603103562413">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603103562413" />
+    <state x="385" y="210" key="run.anything.popup" timestamp="1602748282840">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1602748282840" />
+  </component>
+</project>
