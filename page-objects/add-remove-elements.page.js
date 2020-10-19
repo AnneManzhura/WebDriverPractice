@@ -5,7 +5,7 @@ class AddRemoveElementsPage extends Page {
     get btnAdd () { return $('.example > button') }
     get btnsRemove () { return $('#elements') }
 
-    getBtnRemove(index) {
+    getBtnRemove (index) {
         const btnsRemove = $('#elements')
         return (btnsRemove.$$('button.added-manually')[index])
     }

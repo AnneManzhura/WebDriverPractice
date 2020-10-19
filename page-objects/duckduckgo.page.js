@@ -5,18 +5,15 @@ class DuckduckgoPage {
 
     searchFor (value) {
         this.inputSearch.setValue(value);
-        browser.pause(1000);
         this.btnSearch.click();
     }
 
-    findLink(link){
-
+    findLink (link) {
         let resultLinks = $('.results--main').$$('.result__url')
-
         return (resultLinks.find(el => el.getAttribute('href')===link))
     }
 
-    findResult(index){
+    findResult (index) {
         const resultLinks = $('#links')
         return (resultLinks.$$('div .result')[index].$('.result__url'))
     }

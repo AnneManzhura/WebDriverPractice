@@ -17,7 +17,6 @@ describe('Duckduckgo search', () => {
     })
 
     it('finds links ', () => {
-
         expect(DuckduckgoPage.findLink("http://clearmove.com/")).toBePresent();
     })
 
