@@ -9,7 +9,7 @@ describe('Modal Window page', () => {
         ModalWindowPage.open();
     });
 
-    it('iniatially has modal window opened ', () => {
+    it('initially has modal window opened ', () => {
         expect(ModalWindowPage.modalWindow).toBeDisplayed();
     })
 

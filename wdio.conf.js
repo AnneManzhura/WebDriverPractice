@@ -23,7 +23,8 @@ exports.config = {
     exclude: [
         './tests/duckduckgo-search.js',
         './tests/add-remove-elements.js',
-         './tests/dropdown.js'
+        './tests/dropdown.js',
+        './tests/modal-window.js',
     ],
 
    /* suites: {
