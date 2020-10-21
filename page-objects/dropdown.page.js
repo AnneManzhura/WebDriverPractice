@@ -2,19 +2,19 @@ const Page = require('./page');
 
 class DropDownPage extends Page {
 
-    get dropdown() { return $('#dropdown')}
+    get dropdown () { return $('#dropdown')}
 
-    get selectedOption() {
+    get selectedOption () {
         const drDn = $('#dropdown')
         return drDn.$(`[selected="selected"]`)
     }
 
-    selectOptionByValue(option){
+    selectOptionByValue (option) {
         const drDn = $('#dropdown')
         drDn.selectByAttribute('value', option);
     }
 
-    getOptionByValue(val){
+    getOptionByValue (val) {
         const drDn = $('#dropdown')
         return drDn.$(`[value="${val}"]`)
     }
