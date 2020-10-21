@@ -17,13 +17,13 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-       // './tests/duckduckgo-search.js',
-       // './tests/add-remove-elements.js',
-        './tests/dropdown.js'
+        './tests/**.js',
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        './tests/duckduckgo-search.js',
+        './tests/add-remove-elements.js',
+         './tests/dropdown.js'
     ],
 
    /* suites: {
