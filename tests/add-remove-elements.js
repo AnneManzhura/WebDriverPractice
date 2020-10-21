@@ -2,9 +2,12 @@ const AddRemoveElementsPage = require('../page-objects/add-remove-elements.page'
 
 describe('Add Remove Element page', () => {
 
-    it('shows delete button after clicking add button', () => {
+    before('opens AddRemoveElementsPage and clicks on the Add button',function() {
         AddRemoveElementsPage.open();
         AddRemoveElementsPage.btnAdd.click();
+    });
+
+    it('shows delete button after clicking add button', () => {
         expect(AddRemoveElementsPage.getBtnRemove(0)).toBeDisplayed()
     })
 
