@@ -34,7 +34,7 @@ describe('Modal Window page', () => {
         if (ModalWindowPage.modalWindow.isDisplayed()) {
             ModalWindowPage.btnClose.click();
         }
-        ModalWindowPage.modalWindow.waitForDisplayed({ reverse: true });
+        ModalWindowPage.modalWindow.waitForDisplayed({ timeout:1000, reverse: true });
         ModalWindowPage.btnClickHere.click();
         expect(ModalWindowPage.modalWindow).toBeDisplayed();
     })
