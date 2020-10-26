@@ -12,8 +12,10 @@ describe('Dropdown page', () => {
 
     it('selects option 1', () => {
         const option = '1'
+        const textOption = "Option 1"
         DropDownPage.selectOptionByValue(option);
         expect(DropDownPage.getOptionByValue(option)).toBeSelected();
+        expect(DropDownPage.selectedOption.getText()).toEqual(textOption);
     })
 
     it('selects option 2', () => {
@@ -21,7 +23,4 @@ describe('Dropdown page', () => {
         DropDownPage.selectOptionByValue(option);
         expect(DropDownPage.getOptionByValue(option)).toBeSelected();
     })
-
-
-
 })

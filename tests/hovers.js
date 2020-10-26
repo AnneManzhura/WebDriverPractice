@@ -15,6 +15,4 @@ describe('Hovers page', () => {
         expect(browser).toHaveUrl(urlToBe);
     })
 
-
-
 })

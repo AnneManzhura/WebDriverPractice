@@ -13,44 +13,25 @@ describe('Modal Window page', () => {
         expect(ModalWindowPage.modalWindow).toBeDisplayed();
     })
 
-    it('has btn with text "Close"', () => {
-        if (!ModalWindowPage.modalWindow.isDisplayed()) {
-            ModalWindowPage.btnClickHere.click();
-        }
+    it('closes modal window after clicking the close button', () => {
         ModalWindowPage.modalWindow.waitForDisplayed();
         expect(ModalWindowPage.btnClose).toHaveText('Close');
-    })
-
-    it('closes modal window after clicking the close button', () => {
-        if (!ModalWindowPage.modalWindow.isDisplayed()) {
-            ModalWindowPage.btnClickHere.click();
-        }
-        ModalWindowPage.modalWindow.waitForDisplayed();
         ModalWindowPage.btnClose.click();
         expect(ModalWindowPage.modalWindow).not.toBeDisplayed();
     })
 
     it('opens modal window after clicking the "click here" button', () => {
-        if (ModalWindowPage.modalWindow.isDisplayed()) {
-            ModalWindowPage.btnClose.click();
-        }
         ModalWindowPage.modalWindow.waitForDisplayed({ timeout:1000, reverse: true });
         ModalWindowPage.btnClickHere.click();
         expect(ModalWindowPage.modalWindow).toBeDisplayed();
     })
 
     it('opens modal window with valid text inside', () => {
-        if (!ModalWindowPage.modalWindow.isDisplayed()) {
-            ModalWindowPage.btnClickHere.click();
-        }
         ModalWindowPage.modalWindow.waitForDisplayed();
         expect(ModalWindowPage.modalWindowBody).toHaveText(validModalWindowText);
     })
 
     it('opens modal window with valid title', () => {
-        if (!ModalWindowPage.modalWindow.isDisplayed()) {
-            ModalWindowPage.btnClickHere.click();
-        }
         ModalWindowPage.modalWindow.waitForDisplayed();
         expect(ModalWindowPage.modalWindowTitle).toHaveText(validModalWindowTitle);
     })
