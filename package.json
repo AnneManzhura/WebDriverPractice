@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js"
+    "test": "wdio wdio.conf.js",
+    "cucumber-test": "cucumber-js",
+    "wdio-cucumber-test": "wdio cucumber.conf.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,9 @@
     "chromedriver": "^86.0.0",
     "wdio-chromedriver-service": "^6.0.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@wdio/cucumber-framework": "^6.7.0",
+    "cucumber": "^7.0.0-rc.0"
+  },
   "description": ""
 }
