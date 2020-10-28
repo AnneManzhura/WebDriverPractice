@@ -1,5 +1,4 @@
 const { Before, Given, When, Then } = require('cucumber');
-var assert = require('assert');
 const DuckduckgoPage = require('../page-objects/duckduckgo.page');
 
 Given(/^I open DuckDuckGo page$/, function () {
