@@ -1,3 +1,4 @@
+@skip()
 Feature: Dropdown behaviour
 
   Scenario Outline: Check option selection

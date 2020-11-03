@@ -1,3 +1,4 @@
+@skip()
 Feature: Addition
 
   Addition is great as a verification exercise to get the Cucumber-js infrastructure up and running
