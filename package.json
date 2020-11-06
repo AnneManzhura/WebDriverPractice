@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "@wdio/cucumber-framework": "^6.7.0",
-    "cucumber": "^7.0.0-rc.0"
+    "cucumber": "^7.0.0-rc.0",
+    "moment": "^2.29.1"
   },
   "description": ""
 }

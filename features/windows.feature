@@ -1,3 +1,4 @@
+@skip()
 Feature: Open/Close new Windows
 
   Background:

@@ -1,4 +1,4 @@
-const { Before, Given, When, Then } = require('cucumber');
+const { Given, When, Then } = require('cucumber');
 const WindowsPage = require('../page-objects/windows.page');
 let origPageHandle, newPagehandle, origUrl;
 
