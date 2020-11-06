@@ -2,10 +2,9 @@ const Page = require('./page');
 
 class TablesPage extends Page {
 
-
     get table() { return $('#table2')}
-    get rows() { return this.table.$('tbody').$$('tr')}
 
+    get rows() { return this.table.$('tbody').$$('tr')}
 
     getEmailByRow(row) {return row.$('.email')}
 
@@ -21,7 +20,6 @@ class TablesPage extends Page {
 
     getEditBtnByRow(row) {return row.$('.action').$('a[href*="edit"]')}
 
-
     getRowByEmail(email) {
         return this.getRowByCellText('.email', email);
     }
@@ -31,11 +29,10 @@ class TablesPage extends Page {
     }
 
     getRowByCellText(cellLocator, expectedCellText) {
-        const row = this.findRowByPredicate(row => {
+        return this.findRowByPredicate(row => {
             const text = row.$(cellLocator).getText();
             return text.toLowerCase() === expectedCellText.toLowerCase();
         });
-        return row;
     }
 
     findRowByPredicate(predicate) {
