@@ -1,4 +1,4 @@
-const { When, Then } = require('cucumber');
+const {When, Then} = require('cucumber');
 const TablesPage = require('../page-objects/tables.page');
 const moment = require('moment')
 let changedRow, firstHalfDayBool;
@@ -6,30 +6,36 @@ let changedRow, firstHalfDayBool;
 When(/^I open Tables page$/, function () {
     TablesPage.open();
 });
+
 When(/^I do some action to the table$/, function () {
-    let curTime = moment();
-    let startTimeFirstHalfDay = moment("8:00am", 'h:mma');
-    let endTimeFirstHalfDay= moment("3:00pm", 'h:mma');
+    const curTime = moment();
+    const startTimeFirstHalfDay = moment("8:00am", 'h:mma');
+    const endTimeFirstHalfDay = moment("3:00pm", 'h:mma');
+
     firstHalfDayBool = curTime.isAfter(startTimeFirstHalfDay) && curTime.isBefore(endTimeFirstHalfDay);
-    if (firstHalfDayBool){
+
+    if (firstHalfDayBool) {
         changedRow = TablesPage.getRowByEmail('jdoe@hotmail.com');
         TablesPage.getEditBtnByRow(changedRow).click();
-    }
-    else {
+    } else {
         changedRow = TablesPage.getRowByWebsite('http://www.jsmith.com');
         TablesPage.getDeleteBtnByRow(changedRow).click();
     }
-    browser.pause(1000); //to make sure right btn is clicked
+
 });
+
 Then(/^I see that changed row is the right one$/, function () {
-    if (firstHalfDayBool){
+    if (firstHalfDayBool) {
         expect(TablesPage.getLastNameByRow(changedRow).getText()).toEqual("Doe");
-    }
-    else {
+        expect(browser.getUrl().split('#')[1]).toEqual('edit')
+    } else {
         expect(TablesPage.getLastNameByRow(changedRow).getText()).toEqual("Smith");
+        expect(browser.getUrl().split('#')[1]).toEqual('delete')
     }
 });
+
 Then(/^I see that number of items with price <= "([^"]*)" is "([^"]*)"$/, function (value, num) {
-    let results = TablesPage.rows.filter(row => parseFloat(TablesPage.getDuesByRow(row).getText().substring(1))<=parseFloat(value));
+    const results = TablesPage.rows.filter(row => parseFloat(TablesPage.getDuesByRow(row).getText().substring(1)) <= parseFloat(value));
+
     expect(results.length).toEqual(parseInt(num));
 });
