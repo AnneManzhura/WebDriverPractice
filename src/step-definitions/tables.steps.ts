@@ -1,7 +1,7 @@
-const {When, Then} = require('cucumber');
+import {When, Then}  from 'cucumber';
 const TablesPage = require('../page-objects/tables.page');
 const moment = require('moment')
-let changedRow, firstHalfDayBool;
+let changedRow: WebdriverIO.Element, firstHalfDayBool: boolean;
 
 When(/^I open Tables page$/, function () {
     TablesPage.open();
@@ -21,7 +21,6 @@ When(/^I do some action to the table$/, function () {
         changedRow = TablesPage.getRowByWebsite('http://www.jsmith.com');
         TablesPage.getDeleteBtnByRow(changedRow).click();
     }
-
 });
 
 Then(/^I see that changed row is the right one$/, function () {
@@ -34,8 +33,8 @@ Then(/^I see that changed row is the right one$/, function () {
     }
 });
 
-Then(/^I see that number of items with price <= "([^"]*)" is "([^"]*)"$/, function (value, num) {
-    const results = TablesPage.rows.filter(row => parseFloat(TablesPage.getDuesByRow(row).getText().substring(1)) <= parseFloat(value));
+Then(/^I see that number of items with price <= "(\d+)" is "(\d+)"$/, function (value:number, num:number) {
+    const results = TablesPage.rows.filter((row: WebdriverIO.Element) => parseFloat(TablesPage.getDuesByRow(row).getText().substring(1)) <= value);
 
-    expect(results.length).toEqual(parseInt(num));
+    expect(results.length).toEqual(num);
 });

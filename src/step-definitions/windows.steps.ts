@@ -1,6 +1,6 @@
-const {Given, When, Then} = require('cucumber');
+import {Given, When, Then}  from 'cucumber';
 const WindowsPage = require('../page-objects/windows.page');
-let origPageHandle, newPageHandle, origUrl;
+let origPageHandle: string, newPageHandle: string, origUrl: string;
 
 Given(/^I open Window page$/, function () {
     WindowsPage.open();
@@ -23,7 +23,7 @@ Then(/^I see New Window page open$/, function () {
     expect(browser).toHaveUrl(urlToBe);
 });
 
-Then(/^I see "([^"]*)" text on the New Window page$/, function (text) {
+Then(/^I see "([^"]*)" text on the New Window page$/, function (text: string) {
     expect(WindowsPage.textHeader.getText()).toEqual(text)
 });
 
@@ -32,7 +32,7 @@ When(/^I close the New Window$/, function () {
     browser.switchToWindow(origPageHandle);
 });
 
-Then(/^I see "([^"]*)" text in the previous Window$/, function (text) {
+Then(/^I see "([^"]*)" text in the previous Window$/, function (text: string) {
     expect(WindowsPage.textHeader.getText()).toEqual(text)
 });
 

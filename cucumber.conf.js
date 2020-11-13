@@ -17,7 +17,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './features/**.feature',
+        './src/features/**.feature',
     ],
     // Patterns to exclude.
     /*exclude: [
@@ -148,11 +148,17 @@ exports.config = {
         timeout: 60000
     },*/
     cucumberOpts: {
-        require: ['./step-definitions/*.steps.js'],
+        requireModule: [
+            () => {
+                require('ts-node').register({ transpileOnly: true });
+            },
+        ],
+        require: ['./src/step-definitions/*.steps.ts'],
         strict: false,
         failFast: true,
         tagsInTitle: true,
         timeout: 60000
+
     },
     //
     // =====
