@@ -1,6 +1,6 @@
 import {Page} from './page';
 
-class DropDownPage extends Page {
+export class DropDownPage extends Page {
     page = new Page();
 
     get dropdown (): WebdriverIO.Element { return $('#dropdown')}
@@ -24,4 +24,3 @@ class DropDownPage extends Page {
         return this.page.open('dropdown');
     }
 }
-export = new DropDownPage();

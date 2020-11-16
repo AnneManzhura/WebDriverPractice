@@ -153,12 +153,12 @@ exports.config = {
                 require('ts-node').register({ transpileOnly: true });
             },
         ],
+        ignoreUndefinedDefinitions: true,
         require: ['./src/step-definitions/*.steps.ts'],
         strict: false,
         failFast: true,
         tagsInTitle: true,
         timeout: 60000
-
     },
     //
     // =====

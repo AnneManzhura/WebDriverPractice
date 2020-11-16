@@ -1,19 +1,30 @@
-import {Given, When, Then}  from 'cucumber';
-const DropDownPage = require('../page-objects/dropdown.page');
+import { binding, then, when, given } from 'cucumber-tsflow';
+import {DropDownPage} from '../page-objects/dropdown.page';
+
+@binding()
+export class DropDownPageSteps {
+
+    dropDownPage = new DropDownPage();
+
+    @given(/^I open Dropdown page$/)
+    openDropDownPage() {
+        this.dropDownPage.open();
+    }
+
+    @then(/^I see disabled option initially selected$/)
+    disabledIsSelected() {
+        expect(this.dropDownPage.selectedOption.getAttribute('disabled')).toBe('true');
+    }
+
+    @when(/^I select (.*) from dropdown$/)
+    selectValue(value:string) {
+        this.dropDownPage.selectOptionByValue(value);
+    }
+
+    @then(/^I see (.*) value selected$/)
+    seeSelectedValue(text:string) {
+        expect(this.dropDownPage.selectedOption.getText()).toEqual(text);
+    }
 
 
-Given(/^I open Dropdown page$/, function () {
-    DropDownPage.open();
-});
-
-Then(/^I see disabled option initially selected$/, function () {
-    expect(DropDownPage.selectedOption.getAttribute('disabled')).toBe('true');
-});
-
-When(/^I select (.*) from dropdown$/, function (value:string) {
-    DropDownPage.selectOptionByValue(value);
-});
-
-Then(/^I see (.*) value selected$/, function (text:string) {
-    expect(DropDownPage.selectedOption.getText()).toEqual(text);
-});
+}
