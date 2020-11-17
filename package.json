@@ -25,7 +25,7 @@
     "@wdio/cucumber-framework": "^6.7.0",
     "babel": "^6.23.0",
     "cucumber": "^7.0.0-rc.0",
-    "cucumber-tsflow": "^4.0.0-rc.1",
+    "cucumber-tsflow": "3.4.1",
     "moment": "^2.29.1",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.5"
