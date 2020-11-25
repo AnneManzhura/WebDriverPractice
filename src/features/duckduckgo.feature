@@ -1,4 +1,3 @@
-@skip()
 Feature: DuckDuckGo search
 
   Background:

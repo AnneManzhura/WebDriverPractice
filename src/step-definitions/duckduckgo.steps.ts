@@ -1,22 +1,33 @@
-import {Given, When, Then}  from 'cucumber';
-const DuckduckgoPage = require('../page-objects/duckduckgo.page');
+import { binding, then, when, given } from 'cucumber-tsflow';
+import {DuckduckgoPage} from '../page-objects/duckduckgo.page';
 
-Given(/^I open DuckDuckGo page$/, function () {
-    DuckduckgoPage.open();
-});
+@binding()
+export class DuckduckgoPageSteps {
 
-When(/^I enter "([^"]*)" into search field$/, function (searchInput:string) {
-    DuckduckgoPage.searchFor(searchInput);
-});
+    duckduckgoPage = new DuckduckgoPage();
 
-When(/^I click on the Search button$/, function () {
-    DuckduckgoPage.btnSearch.click();
-});
+    @given(/^I open DuckDuckGo page$/)
+    openDuckduckgoPage () {
+        this.duckduckgoPage.open();
+    };
 
-Then(/^I see Clearmove site in the (\d+) place$/, function (place:number) {
-    expect(DuckduckgoPage.findResultElementByIndex((place-1))).toHaveHrefContaining("http://clearmove.com/");
-});
+    @when(/^I enter "([^"]*)" into search field$/)
+    enterValInSearchStr (searchInput:string) {
+        this.duckduckgoPage.searchFor(searchInput);
+    };
 
-Then(/^I see (\d+) results on the page$/, function (nResults:number) {
-    expect(DuckduckgoPage.countNumberOfResultsOnPage()).toEqual(nResults)
-});
+    @when(/^I click on the Search button$/)
+    clickOnSearchBtn () {
+        this.duckduckgoPage.btnSearch.click();
+    };
+
+    @then(/^I see Clearmove site in the (\d+) place$/)
+    seeCLSiteInPlace (place:number) {
+        expect(this.duckduckgoPage.findResultElementByIndex((place-1))).toHaveHrefContaining("http://clearmove.com/");
+    };
+
+    @then(/^I see (\d+) results on the page$/)
+    seeNResultsOnPage (nResults:number) {
+        expect(this.duckduckgoPage.countNumberOfResultsOnPage()).toEqual(nResults)
+    };
+}

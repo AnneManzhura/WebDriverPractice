@@ -1,4 +1,4 @@
-class DuckduckgoPage {
+export class DuckduckgoPage {
 
     get inputSearch (): WebdriverIO.Element { return $('#search_form_input_homepage') }
 
@@ -33,4 +33,3 @@ class DuckduckgoPage {
     }
 }
 
-export = new DuckduckgoPage();

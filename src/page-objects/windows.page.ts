@@ -1,6 +1,6 @@
 import {Page} from './page';
 
-class WindowsPage extends Page {
+export class WindowsPage extends Page {
     page = new Page();
 
     get btnClick(): WebdriverIO.Element {return $(".example a")}
@@ -11,5 +11,3 @@ class WindowsPage extends Page {
         return this.page.open('windows');
     }
 }
-
-export = new WindowsPage();

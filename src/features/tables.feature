@@ -1,4 +1,3 @@
-@skip()
 Feature: Working with tables
 
   Scenario: Deleting by email in first half of the day

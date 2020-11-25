@@ -1,41 +1,59 @@
-import {Given, When, Then}  from 'cucumber';
-const WindowsPage = require('../page-objects/windows.page');
-let origPageHandle: string, newPageHandle: string, origUrl: string;
+import { binding, then, when, given } from 'cucumber-tsflow';
+import {WindowsPage} from '../page-objects/windows.page';
+import {WindowsPageContext} from "./windows.context";
 
-Given(/^I open Window page$/, function () {
-    WindowsPage.open();
-    origPageHandle = browser.getWindowHandle();
-    origUrl = browser.getUrl();
-});
 
-When(/^I click on Click here button$/, function () {
-    WindowsPage.btnClick.click();
-});
+@binding([WindowsPageContext])
+export class WindowsPageSteps {
+    windowsPage = new WindowsPage();
 
-Then(/^I see New Window page open$/, function () {
-    const urlToBe = origUrl + '/new';
-    const handles = browser.getWindowHandles();
-    const newHandles = handles.filter(handle => handle !== origPageHandle);
+    constructor(private windowsPageContext: WindowsPageContext) {}
 
-    browser.switchToWindow(newHandles[0])
-    newPageHandle = browser.getWindowHandle();
+    @given(/^I open Window page$/)
+    openWindowsPage () {
+        this.windowsPage.open();
+        this.windowsPageContext.origPageHandle = browser.getWindowHandle();
+        this.windowsPageContext.origUrl = browser.getUrl();
+    };
 
-    expect(browser).toHaveUrl(urlToBe);
-});
+    @when(/^I click on Click here button$/)
+    clickOnClickHereBtn () {
+        this.windowsPage.btnClick.click();
+    };
 
-Then(/^I see "([^"]*)" text on the New Window page$/, function (text: string) {
-    expect(WindowsPage.textHeader.getText()).toEqual(text)
-});
+    @then(/^I see New Window page open$/)
+    seeNewWindowOpened () {
+        const urlToBe = this.windowsPageContext.origUrl + '/new';
+        const handles = browser.getWindowHandles();
+        const newHandles = handles.filter(handle => handle !== this.windowsPageContext.origPageHandle);
 
-When(/^I close the New Window$/, function () {
-    browser.closeWindow();
-    browser.switchToWindow(origPageHandle);
-});
+        browser.switchToWindow(newHandles[0])
+        this.windowsPageContext.newPageHandle = browser.getWindowHandle();
 
-Then(/^I see "([^"]*)" text in the previous Window$/, function (text: string) {
-    expect(WindowsPage.textHeader.getText()).toEqual(text)
-});
+        expect(browser).toHaveUrl(urlToBe);
+    };
 
-When(/^I switch to the previous window$/, function () {
-    browser.switchToWindow(origPageHandle)
-});
+    @then(/^I see "([^"]*)" text on the New Window page$/)
+    seeTextOnNewWindow (text: string) {
+        expect(this.windowsPage.textHeader.getText()).toEqual(text)
+    };
+
+    @when(/^I close the New Window$/)
+    closeNewWindow () {
+        browser.closeWindow();
+        browser.switchToWindow(this.windowsPageContext.origPageHandle);
+    }
+
+    @then(/^I see "([^"]*)" text in the previous Window$/)
+    seeTextInWindow (text: string) {
+        expect(this.windowsPage.textHeader.getText()).toEqual(text)
+    };
+
+    @when(/^I switch to the previous window$/)
+    switchToPrevWindow () {
+        browser.switchToWindow(this.windowsPageContext.origPageHandle)
+    };
+
+
+}
+

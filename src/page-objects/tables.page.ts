@@ -1,6 +1,6 @@
 import {Page} from './page';
 
-class TablesPage extends Page {
+export class TablesPage extends Page {
     page = new Page();
 
     get table(): WebdriverIO.Element { return $('#table2')}
@@ -49,5 +49,3 @@ class TablesPage extends Page {
         return this.page.open('tables');
     }
 }
-
-export = new TablesPage();
